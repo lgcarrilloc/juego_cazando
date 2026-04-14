@@ -29,9 +29,27 @@ function graficarComida() {
 function limpiarCanva() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
-// Movimiento del gato
+// Movimientos del gato
 function moverIzquierda() {
   gatoX = gatoX - 10;
+  limpiarCanva();
+  graficarGato();
+  graficarComida();
+}
+function moverDerecha() {
+  gatoX = gatoX + 10;
+  limpiarCanva();
+  graficarGato();
+  graficarComida();
+}
+function moverArriba() {
+  gatoY = gatoY - 10;
+  limpiarCanva();
+  graficarGato();
+  graficarComida();
+}
+function moverAbajo() {
+  gatoY = gatoY + 10;
   limpiarCanva();
   graficarGato();
   graficarComida();
@@ -52,3 +70,6 @@ function iniciarJuego() {
 }
 // Eventos de botones
 document.getElementById("btnIzquierda").onclick = moverIzquierda;
+document.getElementById("btnDerecha").onclick = moverDerecha;
+document.getElementById("btnArriba").onclick = moverArriba;
+document.getElementById("btnAbajo").onclick = moverAbajo;
