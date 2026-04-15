@@ -35,24 +35,28 @@ function moverIzquierda() {
   limpiarCanva();
   graficarGato();
   graficarComida();
+  detectarColision();
 }
 function moverDerecha() {
   gatoX = gatoX + 10;
   limpiarCanva();
   graficarGato();
   graficarComida();
+  detectarColision();
 }
 function moverArriba() {
   gatoY = gatoY - 10;
   limpiarCanva();
   graficarGato();
   graficarComida();
+  detectarColision();
 }
 function moverAbajo() {
   gatoY = gatoY + 10;
   limpiarCanva();
   graficarGato();
   graficarComida();
+  detectarColision();
 }
 // Iniciar juego 
 function iniciarJuego() {
@@ -73,3 +77,12 @@ document.getElementById("btnIzquierda").onclick = moverIzquierda;
 document.getElementById("btnDerecha").onclick = moverDerecha;
 document.getElementById("btnArriba").onclick = moverArriba;
 document.getElementById("btnAbajo").onclick = moverAbajo;
+
+//funcion detectar colisión
+function detectarColision(){
+    if(gatoX < comidaX + ANCHO_COMIDA && gatoX + ANCHO_GATO > comidaX &&
+        gatoY < comidaY + ALTO_COMIDA && gatoY + ALTO_GATO > comidaY
+    ) {
+        alert("¡El gato toco la comida");
+    }
+}
