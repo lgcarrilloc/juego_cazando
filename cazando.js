@@ -2,6 +2,7 @@
 let canvas;
 let ctx;
 let puntaje= 0;
+let tiempo=10;
 // Variables 
 let gatoX = 0;
 let gatoY = 0;
@@ -63,7 +64,8 @@ function moverAbajo() {
 function iniciarJuego() {
   canvas = document.getElementById("areaJuego");
   ctx = canvas.getContext("2d");
-
+  // iniciar tiempo en pantalla
+  mostrarEnSpan("tiempo", tiempo);
   // Gato centrado
   gatoX = (canvas.width / 2) - (ANCHO_GATO / 2);
   gatoY = (canvas.height / 2) - (ALTO_GATO / 2);
@@ -72,13 +74,14 @@ function iniciarJuego() {
   comidaY = canvas.height - ALTO_COMIDA;
   graficarGato();
   graficarComida();
+  //conteo regresivo cada segundo 
+setInterval(restarTiempo, 1000);
 }
 // Eventos de botones
 document.getElementById("btnIzquierda").onclick = moverIzquierda;
 document.getElementById("btnDerecha").onclick = moverDerecha;
 document.getElementById("btnArriba").onclick = moverArriba;
 document.getElementById("btnAbajo").onclick = moverAbajo;
-
 //funcion detectar colisión
 function detectarColision(){
     if(gatoX < comidaX + ANCHO_COMIDA && gatoX + ANCHO_GATO > comidaX &&
@@ -99,4 +102,8 @@ function moverComidaAleatoria(){
 function aumentarPuntaje(){
     puntaje++;
     mostrarEnSpan("puntos", puntaje);
+}
+function restarTiempo(){
+    tiempo--;
+    mostrarEnSpan("tiempo", tiempo);
 }
