@@ -1,0 +1,10 @@
+1.Cambiar el fondo claro por un gradiente oscuro para reducir fatiga visual.
+2.Usar una tipografía moderna y clara para contrastar con el fondo oscuro.
+3.Transformar el panel en una tarjeta oscura translúcida con sombra profunda.
+4.Oscurecer el canvas para integrarlo visualmente con el modo oscuro.
+5.Eliminar bordes duros y usar esquinas redondeadas en todos los elementos.
+6.Rediseñar botones con colores fríos oscuros y alto contraste.
+7.Agregar animaciones hover con efecto de iluminación para interacción visual.
+8.Implementar retroalimentación visual al presionar botones (active).
+9.Destacar el mensaje con color cálido para llamar la atención.
+10.Optimizar la vista móvil manteniendo legibilidad en modo oscuro.

@@ -2,7 +2,7 @@
 let canvas;
 let ctx;
 let puntaje= 0;
-let tiempo=10;
+let tiempo=30;
 let intervaloTiempo;
 // Variables 
 let gatoX = 0;
@@ -22,11 +22,11 @@ function graficarRectangulo(x, y, ancho, alto, color) {
 }
 // Dibujar gato
 function graficarGato() {
-  graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#000000");
+  graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#00b40f");
 }
 // Dibujar comida
 function graficarComida() {
-  graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#00ff00" );
+  graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#ffff00" );
 }
 // funcion limpiar canvas
 function limpiarCanva() {
@@ -120,7 +120,7 @@ function restarTiempo(){
 function reiniciarJuego(){
     clearInterval(intervaloTiempo);
     //reiniciar variables
-    tiempo = 10;
+    tiempo = 30;
     puntaje = 0;
     mostrarEnSpan("tiempo", tiempo);
     mostrarEnSpan("puntos", puntaje);
