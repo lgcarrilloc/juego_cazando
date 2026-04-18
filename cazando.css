@@ -1,24 +1,27 @@
 /* 1. Fondo oscuro con gradiente */
 body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("mario-bg.png");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #eaeaea;
   margin: 0;
   padding: 30px;
-  color: #eaeaea;
+  text-align: center;
+}
+/* 2. Título claro y elegante */
+h1 img {
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
-/* 2. Título claro y elegante */
-h1 {
-  margin-bottom: 15px;
-  color: #ffffff;
-  font-size: 2.3rem;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+button img {
+  vertical-align: middle;
+  margin-right: 8px;
 }
 
 /* 3. Panel tipo tarjeta oscura */

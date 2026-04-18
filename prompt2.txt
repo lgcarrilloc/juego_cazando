@@ -1,0 +1,13 @@
+PROMPT INICIAL:
+
+Mejora la interfaz gráfica del proyecto usando CSS con estilo oscuro, agregando sombras, gradientes y botones modernos.
+
+PROMPTS ADICIONALES UTILIZADOS:
+1. Convierte el diseño a modo oscuro con colores suaves y alto contraste.
+2. Agrega efectos hover y animaciones en botones para mejorar la interacción.
+3. Usa tarjetas translúcidas para los paneles principales.
+4. Oscurece el canvas y aplica bordes redondeados con sombras.
+5. Incorpora un fondo temático estilo Mario Bros (fan-art o imagen local).
+6. Añade imágenes decorativas e íconos relacionados al tema.
+7. Ajusta el diseño para que sea responsive en pantallas pequeñas.
+8. Mantén una estética moderna sin perder legibilidad.

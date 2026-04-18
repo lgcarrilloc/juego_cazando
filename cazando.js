@@ -22,11 +22,11 @@ function graficarRectangulo(x, y, ancho, alto, color) {
 }
 // Dibujar gato
 function graficarGato() {
-  graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#00b40f");
+  graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#0000b4");
 }
 // Dibujar comida
 function graficarComida() {
-  graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#ffff00" );
+  graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#c60000" );
 }
 // funcion limpiar canvas
 function limpiarCanva() {
