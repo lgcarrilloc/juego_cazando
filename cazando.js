@@ -92,7 +92,7 @@ function detectarColision(){
     ) {
         moverComidaAleatoria();
         aumentarPuntaje();
-        reiniciarTiempo();
+        aumentarTiempo();
         limpiarCanva();
         graficarGato();
         graficarComida();
@@ -133,7 +133,7 @@ function reiniciarJuego(){
     graficarComida();
 }
 
-function reiniciarTiempo(){
-  tiempo = 15;
+function aumentarTiempo(){
+  tiempo = tiempo +1;
   mostrarEnSpan("tiempo",tiempo);
 }
