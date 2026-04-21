@@ -2,7 +2,7 @@
 let canvas;
 let ctx;
 let puntaje= 0;
-let tiempo=30;
+let tiempo=15;
 let intervaloTiempo;
 // Variables 
 let gatoX = 0;
@@ -92,6 +92,7 @@ function detectarColision(){
     ) {
         moverComidaAleatoria();
         aumentarPuntaje();
+        reiniciarTiempo();
         limpiarCanva();
         graficarGato();
         graficarComida();
@@ -120,7 +121,7 @@ function restarTiempo(){
 function reiniciarJuego(){
     clearInterval(intervaloTiempo);
     //reiniciar variables
-    tiempo = 30;
+    tiempo = 15;
     puntaje = 0;
     mostrarEnSpan("tiempo", tiempo);
     mostrarEnSpan("puntos", puntaje);
@@ -130,4 +131,9 @@ function reiniciarJuego(){
     limpiarCanva();
     graficarGato();
     graficarComida();
+}
+
+function reiniciarTiempo(){
+  tiempo = 15;
+  mostrarEnSpan("tiempo",tiempo);
 }
