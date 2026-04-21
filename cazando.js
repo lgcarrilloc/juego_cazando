@@ -7,16 +7,19 @@ let intervaloTiempo;
 // Imagen del gato
 let imgGato = new Image();
 imgGato.src = "gato.png";
+// Imagen del raton
+let imgRaton = new Image();
+imgRaton.src = "raton.png";
 // Variables 
 let gatoX = 0;
 let gatoY = 0;
 let comidaX = 0;
 let comidaY = 0;
 // Constantes
-const ANCHO_GATO = 50;
-const ALTO_GATO = 50;
-const ANCHO_COMIDA = 30;
-const ALTO_COMIDA = 30;
+const ANCHO_GATO = 60;
+const ALTO_GATO = 60;
+const ANCHO_COMIDA = 40;
+const ALTO_COMIDA = 40;
 const VELOCIDAD = 15;
 // Función rectangulos
 function graficarRectangulo(x, y, ancho, alto, color) {
@@ -29,12 +32,15 @@ function graficarGato() {
 }
 
 imgGato.onload = function () {
-  graficarGato();
-  graficarComida();
-};
+  imgRaton.onload = function () {
+    graficarGato();
+    graficarComida();
+  }
+}
+
 // Dibujar comida
 function graficarComida() {
-  graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#c60000" );
+  ctx.drawImage(imgRaton, comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA);
 }
 // funcion limpiar canvas
 function limpiarCanva() {
