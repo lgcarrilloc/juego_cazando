@@ -4,6 +4,9 @@ let ctx;
 let puntaje= 0;
 let tiempo=15;
 let intervaloTiempo;
+// Imagen del gato
+let imgGato = new Image();
+imgGato.src = "gato.png";
 // Variables 
 let gatoX = 0;
 let gatoY = 0;
@@ -22,8 +25,13 @@ function graficarRectangulo(x, y, ancho, alto, color) {
 }
 // Dibujar gato
 function graficarGato() {
-  graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#0000b4");
+  ctx.drawImage(imgGato, gatoX, gatoY, ANCHO_GATO, ALTO_GATO);
 }
+
+imgGato.onload = function () {
+  graficarGato();
+  graficarComida();
+};
 // Dibujar comida
 function graficarComida() {
   graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#c60000" );
